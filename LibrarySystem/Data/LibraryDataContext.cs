@@ -1,4 +1,5 @@
 ﻿using LibrarySystem.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,6 @@ namespace LibrarySystem.Data
 
         }
 
-        public DBset<Book> Books { get; set; }
+        public DbSet<Book> Books { get; set; }
     }
 }

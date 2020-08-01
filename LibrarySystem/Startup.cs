@@ -12,6 +12,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace LibrarySystem
 {
@@ -35,7 +37,7 @@ namespace LibrarySystem
             services.AddSwaggerGen();
 
             services.AddDbContext<LibraryDataContext>(
-                options => options.UseSqlServer(Configuration.GetConnectionString("LibraryDatabase"))
+                options =>options.UseSqlServer(Configuration.GetConnectionString("LibraryDatabase"))
                 );   
         }
 
